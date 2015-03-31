@@ -30,7 +30,7 @@ for (var i = 0; i < tblBody.rows.length; i++)
     var itemPricePerUse = parseFloat(itemPrice + '') / parseFloat(itemCounts + '');
     itemPricePerUse = itemPricePerUse.toFixed(4);
     // console.log('数量:' + itemCounts + ', 单价:' + itemPricePerUse + '/u');
-    col_price.innerHTML = itemPricePerUse + goldStr + '/u &nbsp&nbsp&nbsp' + col_price.innerHTML
+    col_price.innerHTML = itemPricePerUse + goldStr + '/u &nbsp&nbsp&nbsp' + col_price.innerHTML;
   };
 }
 
