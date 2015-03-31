@@ -4,6 +4,8 @@
 // @description 够买耗材比较生成单价，省钱利器。
 // @include     http://*.world-of-dungeons.org/wod/spiel/trade/trade.php*
 // @version     0.1
+// @updateURL   https://raw.githubusercontent.com/ilfmonday/GMScripts/master/wodConsumablesUnitPriceCompare.user.js
+// @downloadURL https://raw.githubusercontent.com/ilfmonday/GMScripts/master/wodConsumablesUnitPriceCompare.user.js
 // @grant       none
 // ==/UserScript==
 // console.log('start1');
