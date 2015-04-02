@@ -3,7 +3,7 @@
 // @namespace   lgg
 // @description 够买耗材比较生成单价，省钱利器。
 // @include     http://*.world-of-dungeons.org/wod/spiel/trade/trade.php*
-// @version     0.2
+// @version     0.2.1
 // @updateURL   https://raw.githubusercontent.com/ilfmonday/GMScripts/master/wodConsumablesUnitPriceCompare.user.js
 // @downloadURL https://raw.githubusercontent.com/ilfmonday/GMScripts/master/wodConsumablesUnitPriceCompare.user.js
 // @grant       none
@@ -55,7 +55,10 @@ function genAveragePriceForConsumableGoods (trElement) {
 	itemCountStr = itemCountStr + '';
 	if (itemCountStr != 'null') {
 		var itemCounts = itemCountStr.match(/\d+/);
-		var itemPrice = col_price.innerHTML.match(/\d+/);
+		var itemPrice = col_price.textContent.match(/\d+/);
+		if(!itemPrice){
+			return PRICE_UNAVAILABLE;
+		}
 		var itemPricePerUse = parseFloat(itemPrice + '') / parseFloat(itemCounts + '');
 		itemPricePerUse = itemPricePerUse.toFixed(4);
 		// console.log('数量:' + itemCounts + ', 单价:' + itemPricePerUse + '/u');
